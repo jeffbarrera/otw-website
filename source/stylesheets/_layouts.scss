@@ -1,0 +1,33 @@
+/** MAJOR SITE SECTIONS **/
+
+$section-padding: 60px;
+$section-padding-mobile: 30px;
+
+.site-section {
+    width: 100%;
+    text-align: center;
+}
+
+.site-section__content {
+	margin: 0 auto;
+	padding: 4em $section-padding;
+	text-align: left;
+}
+
+// large screens
+@include bp(bp-max) {
+    .site-section {
+        min-width: $breakpoint-max;
+    }
+
+    .site-section__content {
+        max-width: $breakpoint-max;
+    }
+}
+
+// mobile
+@include bp(bp-mobile) {
+    .site-section__content {
+        padding: 4em $section-padding-mobile;
+    }
+}

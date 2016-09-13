@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Yes on Measure E: Opportunity to Work" %></title>
+
+    <!-- styles & scripts -->
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "styles" %>
+    <%= javascript_include_tag "scripts" %>
+
+    <!-- Google Analytics -->
+    <!-- TK TK TK -->
+  </head>
+
+<!-- BODY -->
+<body class="<%= page_classes %>">
+
+  <div class="body-wrapper">
+
+    <!--HEADER -->
+    <div class="site-section site-section--header" id="header">
+    <header class="site-section__content site-section__content--header site-header">
+
+      <div class="mobile-header">
+
+        <h2 class="site-header__logo logo"><a href="">
+          <span class="logo__yes">Yes</span>
+          <span class="logo__on">on</span>
+          <span class="logo__e">E</span>
+        </a></h2>
+
+        <a href="#" class="site-header__nav-btn"><span>Menu</span></a>
+
+      </div>
+
+      <nav class="site-header__nav top-nav top-nav--js-closed">
+        <ul>
+          <li><a href="" class="top-nav__item">Why</a></li>
+          <li><a href="" class="top-nav__item">About</a></li>
+          <li><a href="" class="top-nav__item">Endorsements</a></li>
+          <li><a href="" class="top-nav__item">Stories</a></li>
+          <li><a href="" class="top-nav__item">News</a></li>
+          <li><a href="" class="top-nav__item top-nav__item--action">Get Involved</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    </div>
+
+    <%= yield %>
+
+  </div><!-- close body wrapper-->
+</body>
+</html>

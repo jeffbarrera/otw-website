@@ -1,0 +1,27 @@
+.logo {
+	@include font-futura;
+	color: $green-text;
+
+	a {
+		transition: all $transition-time-ease;
+	}
+}
+
+.logo__yes {
+	color: $green-text;
+}
+
+.logo__on {
+	color: $grey-light;
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 0.3em;
+	padding: 3px 0 0 0;
+	border-top: 2px solid $grey-light;
+	border-bottom: 2px solid $grey-light;
+	vertical-align: middle;
+}
+
+.logo__e {
+	color: $yellow;
+}

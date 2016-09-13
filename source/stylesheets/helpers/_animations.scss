@@ -1,0 +1,50 @@
+// fade in
+@keyframes fadeIn {
+    0% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+
+//fade in up
+@keyframes fadeInUp {
+    0% {
+    	opacity: 0;
+    	transform: translate3d(0,100px,0); 
+    }
+    100% {
+    	opacity: 1;
+    	transform: translate3d(0,0,0);
+    }
+}
+
+//fade in left
+@keyframes fadeInLeft {
+    0% {
+    	opacity: 0;
+    	transform: translate3d(-100%,0,0); 
+    }
+    100% {
+    	opacity: 1;
+    	transform: translate3d(0,0,0);
+    }
+}
+
+// swing in right
+@keyframes swingInRight {
+	0% {
+		opacity: 0;
+		transform: perspective(1000px) rotateY(-90deg) translate3d(-30px,0,-1000px);
+	}
+	100% {
+		opacity: 1;
+		transform: perspective(500px) rotateY(-7deg) translate3d(-30px,0,-50px);
+	}
+}
+
+// spinner
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}

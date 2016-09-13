@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+// Constants
+$transition-time-ease: .2s ease;
+$breakpoint-max: 1080px;
+$breakpoint-mobile: 680px;
+
+// reset and helpers
+@import "helpers/reset";
+@import "helpers/helper-classes";
+
+// Fonts
+@import "helpers/fonts";
+
+// Mixins
+@import "helpers/mixins";
+
+// animations
+// @import "helpers/animations";
+
+// layouts
+@import "layouts";
+
+
+/*********
+GENERAL STYLES
+*********/
+
+/*Colors*/
+$green-text: #008800;
+$green-bg: #008800;
+$yellow: #E99527;
+$grey-dark: #53585F;
+$grey-light: #808893;
+$text: darken($grey-dark, 10%);
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, input, button, textarea, li, div, table {
+  @include font-body;
+}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+
+/**** SITE SECTIONS ****/
+@import "header";
+@import "logo";
+@import "hero";

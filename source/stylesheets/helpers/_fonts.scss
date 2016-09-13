@@ -1,0 +1,33 @@
+/* mixin by Peter Mescalchin
+https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss */
+
+@mixin fontFace($family, $src, $style: normal, $weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.eot'); // IE9 compat
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			url('#{$src}.woff') format('woff'), // standard
+			url('#{$src}.ttf') format('truetype'); // Safari, Android, iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+// include fonts
+@include fontFace('Font Awesome','../../fonts/fontawesome-webfont');
+@include fontFace('League Spartan','../../fonts/leaguespartan-bold', normal, bold);
+
+
+// build font stacks
+@mixin font-icon {
+    font-family: "Font Awesome";
+}
+
+@mixin font-futura {
+	font-family: 'League Spartan', 'Futura', 'Source Sans Pro', sans-serif;
+}
+
+@mixin font-body {
+	font-family: 'Source Sans Pro', 'Lucida Grande', 'Lucida Sans', 'Futura', 'Helvetica', sans-serif;
+}
