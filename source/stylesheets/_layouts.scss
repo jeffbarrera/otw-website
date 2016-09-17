@@ -31,3 +31,77 @@ $section-padding-mobile: 30px;
         padding: 4em $section-padding-mobile;
     }
 }
+
+
+/** GRID SYSTEMS **/
+.grid {
+    @include clearfix;
+}
+
+.grid__col {
+    box-sizing: border-box;
+}
+
+// 2 column
+.grid--two-col {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            float: left;
+        }
+
+        .grid__col:last-child {
+            float: right;
+        }
+    }
+}
+
+.grid--two-col-six-four {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            width: 59%;
+        }
+
+        .grid__col:last-child {
+            width: 40%;
+        }
+    }
+}
+
+
+/** SECTIONS **/
+.main-col {
+    @include bp(bp-not-mobile) {
+        box-sizing: border-box;
+        max-width: 32em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

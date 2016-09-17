@@ -1,0 +1,469 @@
+// Forms
+
+// base form elements
+input[type="text"], input[type="email"], input[type="search"] {
+    border: 0;
+    background-color: darken($yellow, 10%);
+    padding: .8em 1em .4em 1em;
+    margin-bottom: 1.3em;
+    width: 100%;
+    box-sizing: border-box;
+    @include font-futura;
+    color: #fff;
+    font-size: 1em;
+    display: block;
+    transition: all $transition-time-ease;
+    border: 4px solid rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+
+    @include input-placeholder {
+        color: #fff;
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: 0;
+        background-color: darken($grey-light, 15%);
+        background-color: #fff;
+        color: #000;
+
+        @include input-placeholder {
+            color: $grey-light;
+        }
+    }
+
+    &.error_input {
+        $red: darken(#E34110, 10%);
+        background-color: $red;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: $red;
+            background-color: #fff;
+
+            @include input-placeholder {
+                color: $red;
+            }
+        }
+    }
+
+    // mobile
+    @include bp(bp-mobile) {
+        font-size: .75em;
+    }
+}
+
+textarea {
+	border: 0;
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	padding: 1em;
+	min-height: 200px;
+}
+
+form {
+
+	a {
+		@include underline-link(#fff);
+	}
+
+	// lists
+
+	li {
+	    list-style: none;
+	}
+
+	.checkbox_group_wrap {
+	    margin: 1.5em 0;
+	}
+
+	label.control-label.check_radio_label {
+	    display: block;
+	    margin-bottom: .75em;
+	}
+
+	label.checkbox {
+	    display: block;
+	    margin-bottom: .5em;
+
+	    input[type="checkbox"] {
+	        margin: .25em .5em 1em 0;
+	        float: left;
+	    }
+
+	}
+}
+
+
+// Buttons
+.button, input[type="submit"] {
+    display: inline-block;
+    @include font-futura;
+    background-color: #fff;
+    padding: .9em 1.5em .5em;
+    margin-bottom: 0;
+    color: $green-bg;
+    border: 2px solid #fff;
+    transition: all $transition-time-ease;
+    // border-radius: 25px;
+
+    &:hover, &:focus {
+        background-color: $green-bg;
+        color: #fff;
+        outline: 0;
+    }
+
+    &:active {
+        color: #ddd;
+        background-color: darken($green-bg, 15%);
+        box-shadow: inset 0px 1px 10px rgba(0,0,0,.1);
+    }
+}
+
+// mobile
+@include bp(bp-mobile) {
+    input[type="submit"] {
+        font-size: .75em;
+    }
+}
+
+
+.can_embed {
+
+	// hide AN elements
+
+	h2, h4, #logo_wrap, #action_info, .ajax-loading, #d_sharing, .control-label, .country_wrap {
+        display: none;
+    }
+
+    #action_welcome_message_inner {
+        margin-bottom: 1em;
+        line-height: 1.5;
+        font-size: 1.25em;
+        color: #fff;
+        font-weight: bold;
+
+        small {
+        	font-weight: 500;
+
+        	a {
+        		font-weight: bold;
+        	}
+        }
+    }
+
+    .ajax-loading {
+        animation: spinner 2s linear infinite;
+    }
+
+    @include bp(bp-mobile) {
+        #action_welcome_message_inner {
+            font-size: 1em;
+        }
+    }
+}
+
+
+
+// Action follow-up
+#can_thank_you {
+    h1 {
+        display: none;
+    }
+
+    &:before {
+        content: 'Thanks for signing up!';
+        color: #fff;
+        @include font-futura;
+        font-size: 1.375em;
+        display: block;
+        margin: 2em 0 -.5em;
+    }
+}
+
+
+.can_thank_you-block,
+.section.white-text .can_thank_you-block {
+	margin-top: 3em;
+
+	h4 {
+		color: #fff;
+		@include font-futura;
+		position: relative;
+		margin-bottom: 1em;
+		display: block;
+	}
+
+	a.tooltip {
+		@include font-body;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		margin-left: -1.35em;
+		background-color: #fff;
+		color: $grey-dark;
+		color: $yellow;
+		width: 1.5em;
+		height: 1.5em;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 50%;
+		padding-top: .05em;
+		cursor: help;
+
+		span {
+			display: block;
+			position: absolute;
+			font-weight: 500;
+			color: #fff;
+			text-align: left;
+			top: 0;
+			margin-top: -3em;
+			width: 240px;
+			left: -218px;
+			box-sizing: border-box;
+			background-color: $grey-dark;
+			font-size: .875em;
+			padding: 1.5em;
+			line-height: 1.5;
+			@include arrow(bottom, $grey-dark, 10px);
+			transform: translateY(-80%);
+			opacity: 0;
+			transition: all .3s ease;
+			z-index: -1;
+		}
+
+		&:hover {
+
+			span {
+				transform: translateY(-100%);
+				opacity: 1;
+				z-index: 100;
+			}
+
+		}
+	}
+
+	label {
+		color: #fff;
+		margin: .5em 0;
+		display: block;
+		// font-weight: 700;
+		font-size: 1.125em;
+	}
+
+	// share links
+	.share_button {
+		display: inline-block;
+		border: 2px solid #fff;
+		background-color: $green-text;
+		color: #fff;
+		background-color: #fff;
+		color: $green-bg;
+		width: 35%;
+		box-sizing: border-box;
+		padding: .5em;
+		text-align: center;
+		margin-bottom: 1em;
+		transition: all $transition-time-ease;
+
+		span::before {
+			@include font-icon;
+			margin-right: .5em;
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: $green-text;
+		}
+
+		&:active {
+			color: #ddd;
+			background-color: darken($green-text, 10%);
+		}
+	}
+
+	.share-facebook {
+		color: $green-bg;
+		margin-right: 7%;
+
+		span::before {
+			content: '\f164';
+		}
+
+		&:hover {
+			background-color: $green-bg;
+			color: #fff;
+		}
+
+		&:active {
+			background-color: darken($green-bg, 10%);
+		}
+	}
+
+	.share-twitter {
+		span::before {
+			content: '\f099';
+		}
+	}
+
+	.share-google {
+		display: none;
+	}
+
+    // hide direct link
+    label[for="form-share_link"], input[name="form-share_link"] {
+        display: none;
+    }
+
+	//hide embed code
+	&:last-child {
+		display: none;
+	}
+}
+
+
+// Side Action
+
+.section .side-action {
+    background-color: #fff;
+
+    // .img {
+    //     //min-height: 400px;
+    //     background-image: url('img/fb-selfie.jpg');
+    //     background-size: 100%;
+    //     background-repeat: no-repeat;
+    //     padding-bottom: 120%;
+    // }
+
+    .content {
+        padding: 2em;
+
+        a {
+            color: $green-bg;
+            border-bottom: 1px solid rgba(0,0,0,0);
+            transition: all $transition-time-ease;
+
+            &:hover {
+                border-color: $green-bg;
+            }
+
+            &:active {
+                color: darken($green-bg, 10%);
+                border-color: darken($green-bg, 10%);
+            }
+        }
+    }
+
+    h3 {
+        color: $green-bg;
+        @include font-futura;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+
+    p {
+        color: $text;
+        margin-bottom: .5em;
+    }
+
+    ol li {
+        margin-left: 1.2em;
+        margin-bottom: .5em;
+    }
+
+    a.btn {
+        display: inline-block;
+        background-color: $green-bg;
+        color: #fff;
+        padding: 1em 2em .7em;
+        margin-top: 1.5em;
+        @include font-futura;
+
+        &:hover {
+            background-color: darken($green-text, 15%);
+            border-color: rgba(0,0,0,0);
+        }
+    }
+
+    // form
+    #can_embed_form {
+        color: #000;
+        // min-height: 0;
+        margin-top: 2em;
+
+        #action_welcome_message_inner {
+        	color: $text;
+        }
+
+
+        input[type="text"],
+        input[type="email"] {
+            font-size: .9em;
+            background-color: #aaa;
+
+            &:focus {
+                background-color: #666;
+                color: #fff;
+
+                 @include input-placeholder {
+			        color: #fff;
+			        opacity: 1;
+			    }
+            }
+
+            &.error_input {
+                background-color: darken($red, 10%);
+
+                &:focus {
+                    background-color: darken($red, 20%);
+                }
+            }
+        }
+
+        input[type="submit"] {
+            font-size: 1em;
+            background-color: $green-bg;
+            color: #fff;
+            border: 0;
+
+            &:hover, &:focus {
+                background-color: $yellow;
+            }
+        }
+
+        //message
+
+        #subject {
+            background-color: #eee;
+            color: #000;
+        }
+
+        textarea {
+            font-size: 1em;
+            @include font-body;
+            background-color: #eee;
+            color: #000;
+            min-height: 450px;
+            margin-bottom: 1em;
+        }
+    }
+
+    @include bp(bp-mobile) {
+        h3 {
+            font-size: 1em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

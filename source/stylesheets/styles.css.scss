@@ -28,10 +28,11 @@ GENERAL STYLES
 
 /*Colors*/
 $green-text: #008800;
-$green-bg: #008800;
+$green-bg: #285621;
 $yellow: #E99527;
 $grey-dark: #53585F;
 $grey-light: #808893;
+$red: #E34110;
 $text: darken($grey-dark, 10%);
 
 body {
@@ -54,3 +55,6 @@ em, i {font-style: italic;}
 @import "header";
 @import "logo";
 @import "hero";
+@import "content";
+@import "sidebar";
+@import "forms";

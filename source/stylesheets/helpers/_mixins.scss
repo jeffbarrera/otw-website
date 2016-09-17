@@ -208,8 +208,77 @@
     }
 }
 
+// Form input placeholder
+@mixin input-placeholder {
+
+    &::placeholder {
+      @content;
+    }
+
+    &.placeholder {
+        @content;
+    }
+}
 
 
+
+
+
+// arrows
+@mixin arrow($direction, $color, $size: 20px) {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 0; 
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @if $direction == top {
+        &::before {
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-bottom: $size solid $color;
+            margin-top: $size * -1;
+            left: 2em;
+        }
+    }
+
+    @else if $direction == left {
+        &::before {
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-right: $size solid $color;
+            margin-left: $size * -1;
+            top: 2em;
+        }
+    }
+
+    @else if $direction == right {
+        &::before {
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-left: $size solid $color;
+            left: 100%;
+            top: 2em;
+        }
+    }
+
+    @else if $direction == bottom {
+        &::before {
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-top: $size solid $color;
+            left: 100%;
+            margin-left: $size * -2;
+            top: 100%;
+        }
+    }
+}
 
 
 

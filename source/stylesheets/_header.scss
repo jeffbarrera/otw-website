@@ -73,7 +73,7 @@
 
 /** MOBILE **/
 
-@include bp(1030px) {
+@include bp(bp-mobile) {
 
 	.site-section__content--header {
     	padding: 0;
