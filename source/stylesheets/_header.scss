@@ -60,6 +60,14 @@
 	padding-right: 0;
 	color: $yellow;
 
+	&:hover {
+		color: $red;
+	}
+
+	&:active {
+		color: darken($red, 10%);
+	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -153,12 +161,12 @@
 		}
 
 		&:hover {
-			background-color: $yellow;
+			background-color: $red;
 			color: #fff;
 		}
 
 		&:active {
-			background-color: darken($yellow, 10%);
+			background-color: darken($red, 10%);
 		}
 	}
 }
