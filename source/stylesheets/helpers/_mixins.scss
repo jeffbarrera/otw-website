@@ -211,6 +211,18 @@
 // Form input placeholder
 @mixin input-placeholder {
 
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &::-moz-input-placeholder {
+        @content;
+    }
+
+    &::-ms-input-input-placeholder {
+        @content;
+    }
+
     &::placeholder {
       @content;
     }

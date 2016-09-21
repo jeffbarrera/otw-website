@@ -5,7 +5,7 @@ input[type="text"], input[type="email"], input[type="search"] {
     border: 0;
     background-color: darken($yellow, 10%);
     padding: .8em 1em .4em 1em;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.5em;
     width: 100%;
     box-sizing: border-box;
     @include font-futura;
@@ -15,6 +15,11 @@ input[type="text"], input[type="email"], input[type="search"] {
     transition: all $transition-time-ease;
     border: 4px solid rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
+
+    &::-webkit-input-placeholder {
+        color: #0f0;
+    }
+
 
     @include input-placeholder {
         color: #fff;
@@ -103,22 +108,31 @@ form {
     background-color: #fff;
     padding: .9em 1.5em .5em;
     margin-bottom: 0;
-    color: $green-bg;
+    color: $green-text;
     border: 2px solid #fff;
     transition: all $transition-time-ease;
-    // border-radius: 25px;
+    border-radius: 25px;
 
     &:hover, &:focus {
-        background-color: $green-bg;
+        background-color: $green-text;
         color: #fff;
         outline: 0;
     }
 
     &:active {
         color: #ddd;
-        background-color: darken($green-bg, 15%);
+        background-color: $green-bg;
         box-shadow: inset 0px 1px 10px rgba(0,0,0,.1);
     }
+}
+
+.button--outline {
+    background-color: transparent;
+    color: #fff;
+}
+
+.button--list {
+    margin-right: 1.5em;
 }
 
 // mobile
@@ -261,13 +275,14 @@ form {
 		background-color: $green-text;
 		color: #fff;
 		background-color: #fff;
-		color: $green-bg;
+		color: $green-text;
 		width: 35%;
 		box-sizing: border-box;
 		padding: .5em;
 		text-align: center;
 		margin-bottom: 1em;
 		transition: all $transition-time-ease;
+        border-radius: 25px;
 
 		span::before {
 			@include font-icon;
@@ -286,7 +301,7 @@ form {
 	}
 
 	.share-facebook {
-		color: $green-bg;
+		color: $green-text;
 		margin-right: 7%;
 
 		span::before {
@@ -294,7 +309,7 @@ form {
 		}
 
 		&:hover {
-			background-color: $green-bg;
+			background-color: $green-text;
 			color: #fff;
 		}
 

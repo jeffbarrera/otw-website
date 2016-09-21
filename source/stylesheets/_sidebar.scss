@@ -1,3 +1,36 @@
+.sidebar {
+	padding: 2.25em;
+	background-color: $grey-dark;
+}
+
 .sidebar--yellow {
 	background-color: $yellow;
+}
+
+.sidebar--push-up {
+	@include bp(bp-not-mobile) {
+		position: relative;
+		margin-top: -8.5em;
+	}
+}
+
+
+// Typography
+.sidebar__heading {
+	@include font-futura;
+	font-size: 1.5em;
+	margin-bottom: .75em;
+	color: #fff;
+}
+
+.sidebar p {
+	color: #fff;
+	line-height: 1.4;
+	font-size: 1.125em;
+	margin-bottom: 1em;
+}
+
+// Forms
+.sidebar form {
+	margin-top: 1.5em;
 }

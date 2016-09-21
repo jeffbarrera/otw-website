@@ -57,7 +57,7 @@ $section-padding-mobile: 30px;
     }
 }
 
-.grid--two-col-six-four {
+.grid--six-four {
 
     @include bp(bp-not-mobile) {
 
@@ -71,6 +71,20 @@ $section-padding-mobile: 30px;
     }
 }
 
+
+.grid--seven-three {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            width: 64%;
+        }
+
+        .grid__col:last-child {
+            width: 35%;
+        }
+    }
+}
 
 /** SECTIONS **/
 .main-col {
