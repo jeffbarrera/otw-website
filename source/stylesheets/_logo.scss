@@ -7,8 +7,32 @@
 	}
 }
 
+// ICON
+
+$icon-size-header: 45px;
+$icon-size-footer: 55px;
+
+.logo a:before {
+	content: '';
+	display: inline-block;
+	width: $icon-size-header;
+	height: $icon-size-header;
+	background-image: url('../images/icon-header_2x.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: -5px;
+}
+
+.logo--footer a:before {
+	width: $icon-size-footer;
+	height: $icon-size-footer;
+	background-image: url('../images/icon-footer_2x.png');
+	vertical-align: -6px;
+}
+
 .logo__yes {
 	color: $green-text;
+	transition: all $transition-time-ease;
 }
 
 .logo__on {
@@ -24,4 +48,5 @@
 
 .logo__e {
 	color: $yellow;
+	transition: all $transition-time-ease;
 }

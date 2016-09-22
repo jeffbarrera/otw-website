@@ -53,9 +53,11 @@ em, i {font-style: italic;}
 
 /**** SITE SECTIONS ****/
 @import "header";
+@import "footer";
 @import "logo";
 @import "hero";
 @import "content";
 @import "sidebar";
 @import "forms";
-@import "homepage/stories"
+@import "homepage/stories";
+@import "modules";

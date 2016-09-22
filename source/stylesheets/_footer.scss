@@ -1,0 +1,81 @@
+.site-section--footer {
+	background-color: $grey-dark;
+}
+
+// LAYOUT
+
+.footer__content {
+	@include clearfix;
+}
+
+.footer__branding {
+	@include bp(bp-not-mobile) {
+		float: left;
+		width: 40%;
+	}
+}
+
+.footer__info {
+	@include bp(bp-not-mobile) {
+		float: right;
+		max-width: 50%;
+	}
+}
+
+.footer__disclaimer {
+	border: 2px solid #fff;
+	padding: 1em;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: -1em;
+}
+
+// TYPOGRAPHY
+
+.footer p, .footer h4 {
+	color: #fff;
+	line-height: 1.4;
+}
+
+.footer a {
+	color: #fff;
+	@include underline-link(#fff);
+}
+
+.footer__info h4 {
+	font-size: 1.25em;
+	margin-bottom: .5em;
+}
+
+.footer__info p {
+	font-size: .875em;
+	margin-bottom: .25em;
+}
+
+
+// LOGO
+.logo--footer {
+	font-size: 3em;
+	margin-bottom: .05em;
+
+	a {
+		border-bottom: 0;
+	}
+
+	.logo__yes, .logo__on, .logo__e {
+		color: #fff;
+	}
+
+	.logo__on {
+		border-color: #fff;
+	}
+}
+
+.footer__svr-link {
+	font-size: .875em;
+
+	strong {
+		text-transform: uppercase;
+		@include font-futura;
+	}
+}
