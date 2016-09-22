@@ -22,6 +22,10 @@
 	font-size: 1.5em;
 	margin-bottom: .75em;
 	color: #fff;
+
+	@include bp(bp-mobile) {
+		font-size: 1em;
+	}
 }
 
 .sidebar p {
@@ -29,6 +33,10 @@
 	line-height: 1.4;
 	font-size: 1.125em;
 	margin-bottom: 1em;
+
+	@include bp(bp-mobile) {
+		font-size: .875em;
+	}
 }
 
 // Forms

@@ -93,14 +93,14 @@
 	}
 
 	.site-header__logo {
-		font-size: 2em;
-		padding: .5em 0 .25em;
+		font-size: 1.75em;
+		padding: .4em 0 .25em;
 	}
 
 	.site-header__nav-btn {
         float: right;
         @include hamburger-icon(22px, $green-text, cross);
-        margin-top: 14px;
+        margin-top: 10px;
         margin-right: -5px;
     }
 

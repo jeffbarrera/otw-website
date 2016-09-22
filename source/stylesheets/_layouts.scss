@@ -28,7 +28,7 @@ $section-padding-mobile: 30px;
 // mobile
 @include bp(bp-mobile) {
     .site-section__content {
-        padding: 4em $section-padding-mobile;
+        padding: $section-padding-mobile;
     }
 }
 

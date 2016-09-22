@@ -6,6 +6,10 @@
 	color: $yellow;
 	line-height: 1.6;
 	margin-bottom: 1em;
+
+	@include bp(bp-mobile) {
+		font-size: 1em;
+	}
 }
 
 .content h3 {
@@ -21,6 +25,10 @@
 	font-size: 1em;
 	line-height: 1.5;
 	margin-bottom: 1em;
+
+	@include bp(bp-mobile) {
+		font-size: .875em;
+	}
 }
 
 .content a {

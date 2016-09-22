@@ -10,7 +10,9 @@
 // ICON
 
 $icon-size-header: 45px;
+$icon-size-header-mobile: 35px;
 $icon-size-footer: 55px;
+$icon-size-footer-mobile: 35px;
 
 .logo a:before {
 	content: '';
@@ -21,6 +23,11 @@ $icon-size-footer: 55px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	vertical-align: -5px;
+
+	@include bp(bp-mobile) {
+		width: $icon-size-header-mobile;
+		height: $icon-size-header-mobile;
+	}
 }
 
 .logo--footer a:before {
@@ -28,6 +35,11 @@ $icon-size-footer: 55px;
 	height: $icon-size-footer;
 	background-image: url('../images/icon-footer_2x.png');
 	vertical-align: -6px;
+
+	@include bp(bp-mobile) {
+		width: $icon-size-footer-mobile;
+		height: $icon-size-footer-mobile;
+	}
 }
 
 .logo__yes {
