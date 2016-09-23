@@ -3,7 +3,7 @@
 // Constants
 $transition-time-ease: .2s ease;
 $breakpoint-max: 1080px;
-$breakpoint-mobile: 680px;
+$breakpoint-mobile: 950px;
 
 // reset and helpers
 @import "helpers/reset";
@@ -20,6 +20,7 @@ $breakpoint-mobile: 680px;
 
 // layouts
 @import "layouts";
+@import "grid";
 
 
 /*********
@@ -31,7 +32,7 @@ $green-text: #008800;
 $green-bg: #285621;
 $yellow: #E99527;
 $grey-dark: #53585F;
-$grey-light: #808893;
+$grey-light: lighten($grey-dark, 20%);
 $red: #E34110;
 $text: darken($grey-dark, 10%);
 
@@ -55,9 +56,18 @@ em, i {font-style: italic;}
 @import "header";
 @import "footer";
 @import "logo";
-@import "hero";
 @import "content";
 @import "sidebar";
 @import "forms";
+@import "homepage/hero";
 @import "homepage/stories";
-@import "modules";
+@import "sections";
+@import "objects/link-block";
+@import "objects/media-object";
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 .site-section--footer {
-	background-color: $grey-dark;
+	background-color: darken($grey-dark, 10%);
+	// background-color: lighten($grey-dark, 10%);
 }
 
 // LAYOUT

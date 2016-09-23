@@ -1,0 +1,85 @@
+
+/** GRID SYSTEMS **/
+.grid {
+    @include clearfix;
+}
+
+.grid__col {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+// 2 column
+.grid--two-col {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            float: left;
+        }
+
+        .grid__col:last-child {
+            float: right;
+        }
+    }
+}
+
+.grid--six-four {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            width: 59%;
+        }
+
+        .grid__col:last-child {
+            width: 40%;
+        }
+    }
+}
+
+
+.grid--seven-three {
+
+    @include bp(bp-not-mobile) {
+
+        .grid__col:first-child {
+            width: 64%;
+        }
+
+        .grid__col:last-child {
+            width: 35%;
+        }
+    }
+}
+
+// 3 column
+$three-col-padding: 1em;
+
+.grid--three-col {
+    @include bp(bp-not-mobile) {
+        display: flex;
+
+        .grid__col {
+            width: 33%;
+            padding: 0 $three-col-padding;
+        }
+
+        .grid__col:first-child {
+            padding-left: 0;
+            padding-right: $three-col-padding * 2;
+        }
+
+
+        .grid__col:last-child {
+            padding-left: $three-col-padding * 2;
+            padding-right: 0;
+        }
+    }
+    @include bp(bp-mobile) {
+        .grid__col {
+            margin-bottom: 1em;
+        }
+    }
+}
+

@@ -1,0 +1,107 @@
+/*******
+LINK BLOCKS
+*******/
+.link-block {
+	display: block;
+}
+
+.link-block .link-block__heading { //specificity hack to override content rules
+	color: $green-text;
+	transition: all $transition-time-ease;
+}
+
+.link-block .link-block__content {
+	font-weight: normal;
+}
+
+.link-block .link-block__more-link {
+	color: $green-text;
+	display: inline-block;
+	margin-bottom: 0;
+	transition: all $transition-time-ease;
+
+	&:active {
+		color: darken($green-text, 10%);
+	}
+}
+
+.link-block:hover {
+	.link-block__heading {
+		color: $yellow;
+	}
+}
+
+
+// white variant
+a.link-block--white {
+	border-bottom: 0;
+}
+
+.link-block--white .link-block__heading,
+.link-block--white .link-block__content,
+.link-block--white .link-block__more-link {
+	color: #fff;
+}
+
+.link-block--white .link-block__more-link {
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.link-block--white:hover {
+	.link-block__heading {
+		color: #fff;
+	}
+
+	.link-block__more-link {
+		border-bottom: 1px solid #fff;
+	}
+}
+
+// popout variant
+.link-block--popout,
+a.link-block--popout {
+	background-color: #fff;
+	border-bottom: 0px;
+	padding: 2em;
+
+	@include bp(bp-not-mobile) {
+		position: relative;
+		margin: -6em -.8em -6em -3em;
+		box-shadow: 0 3px 5px rgba(0,0,0,.3);
+	}
+}
+
+.link-block--popout .link-block__more-link {
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.link-block--popout:hover .link-block__more-link {
+	border-color: $green-text;
+}
+
+
+// story links
+.story-link__quote {
+	color: $grey-dark;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+	line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
