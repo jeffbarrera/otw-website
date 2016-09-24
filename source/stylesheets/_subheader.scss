@@ -1,0 +1,39 @@
+.site-section--subheader {
+	background-color: $green-bg;
+}
+
+.subheader {
+	padding-top: 2.7em;
+	padding-bottom: 2em;
+	@include clearfix;
+
+	@include bp(bp-mobile) {
+		padding-top: 1.5em;
+		padding-bottom: 1.25em;
+	}
+}
+
+.subheader__heading {
+	@include font-futura;
+	font-size: 1.25em;
+	color: #fff;
+
+	@include bp(bp-not-mobile) {
+		font-size: 2.5em;
+		float: left;
+	}
+}
+
+.subheader__heading a {
+	color: #fff;
+	@include underline-link(#fff);
+}
+
+.subheader__nav {
+	float: right;
+	padding-top: .5em;
+
+	@include bp(bp-mobile) {
+		float: none;
+	}
+}

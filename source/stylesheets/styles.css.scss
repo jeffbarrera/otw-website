@@ -28,8 +28,8 @@ GENERAL STYLES
 *********/
 
 /*Colors*/
-$green-text: #008800;
-$green-bg: #285621;
+$green-text: #4A8958;
+$green-bg: #4A8958;
 $yellow: #E99527;
 $grey-dark: #53585F;
 $grey-light: lighten($grey-dark, 20%);
@@ -56,6 +56,7 @@ em, i {font-style: italic;}
 @import "header";
 @import "footer";
 @import "logo";
+@import "subheader";
 @import "content";
 @import "sidebar";
 @import "forms";
@@ -64,7 +65,7 @@ em, i {font-style: italic;}
 @import "sections";
 @import "objects/link-block";
 @import "objects/media-object";
-
+@import "objects/line-nav"
 
 
 

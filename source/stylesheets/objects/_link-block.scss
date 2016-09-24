@@ -5,6 +5,10 @@ LINK BLOCKS
 	display: block;
 }
 
+a.link-block {
+	border-bottom: 0px;
+}
+
 .link-block .link-block__heading { //specificity hack to override content rules
 	color: $green-text;
 	transition: all $transition-time-ease;
@@ -18,6 +22,7 @@ LINK BLOCKS
 	color: $green-text;
 	display: inline-block;
 	margin-bottom: 0;
+	border-bottom: 1px solid rgba(0,0,0,0);
 	transition: all $transition-time-ease;
 
 	&:active {
@@ -28,6 +33,10 @@ LINK BLOCKS
 .link-block:hover {
 	.link-block__heading {
 		color: $yellow;
+	}
+
+	.link-block__more-link {
+		border-color: $green-text;
 	}
 }
 
@@ -41,10 +50,6 @@ a.link-block--white {
 .link-block--white .link-block__content,
 .link-block--white .link-block__more-link {
 	color: #fff;
-}
-
-.link-block--white .link-block__more-link {
-	border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 .link-block--white:hover {

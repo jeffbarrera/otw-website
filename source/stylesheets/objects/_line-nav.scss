@@ -1,0 +1,32 @@
+.line-nav__item {
+	display: inline-block;
+	float: left;
+	list-style: none;
+	margin-left: .7em;
+	padding-right: .7em;
+	border-right: 1px solid rgba(255,255,255,.5);
+
+	&:last-child {
+		border-right: 0px;
+		padding-right: 0;
+	}
+}
+
+.line-nav__link {
+	color: #fff;
+	@include underline-link(#fff);
+	font-size: 1.25em;
+}
+
+
+// mobile layout
+@include bp(bp-mobile) {
+
+	.line-nav {
+		margin-left: -.7em;
+	}
+
+	.line-nav__link {
+		font-size: .75em;
+	}
+}
