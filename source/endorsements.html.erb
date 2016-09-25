@@ -1,0 +1,222 @@
+---
+title: "Endorsements | Measure E: Opportunity to Work"
+
+electeds:
+- "Mike Honda, Congressmember"
+- "Jim Beall, State Senator"
+- "Bob Wieckowski, State Senator"
+- "Bill Monning, State Senator"
+- "Luis Alejo, Assemblymember"
+- "Nora Campos, Assemblymember"
+- "Mark Stone, Assemblymember"
+- "Anna Caballero, Former Assemblymember"
+- "Dave Cortese, President of the Santa Clara County Board of Supervisors"
+- "Cindy Chavez, Santa Clara County Supervisor"
+- "Ken Yeager, Santa Clara County Supervisor"
+- "Karina Cervantez Alejo, Watsonville Mayor Pro Tempore"
+- "Ash Kalra, San Jose City Council Member"
+- "Donald Rocha, San Jose City Council Member"
+- "Raul Peralez, San Jose City Council Member"
+- "Richard Waterman, Former Mayor of the City of Campbell"
+- "Rod Sinks, City of Cupertino Council Member"
+- "Teresa O’Neill, City of Santa Clara Vice Mayor"
+- "Kathy Watanabe, City of Santa Clara Council Member"
+- "Debi Davis, City of Santa Clara Council Member"
+- "John McLemore, Former City of Santa Clara Council Member"
+- "Patricia Mahan, Former City of Santa Clara Mayor and Council Member"
+- "Margaret Abe-Koga, Former Mayor and Council Member of City of Mountain View"
+- "Jim Davis, City of Sunnyvale Council Member"
+- "Tara Martin Milius, City of Sunnyvale Council Member"
+- "Carmen Montano, City of Milpitas Vice Mayor"
+- "John L. Varela, Director Santa Clara Valley Water District 1 and 2016 Vice Chair"
+- "Barbara Keegan, Director – Santa Clara Valley Water District 2 and 2016 Board Chair"
+- "Richard P. Santos, Director - Santa Clara Valley Water District 3"
+- "Albert Gonzalez, Santa Clara Unified School District Board President"
+- "Noelani Sallings, Santa Clara Unified School District Trustee"
+- "Sylvia Arenas, Evergreen School District Trustee"
+- "Wendy Ho, San Jose Evergreen Community College District Trustee"
+- "Karen Martinez, Alum Rock Union Elementary School District Board of Trustees Member"
+- "Robert Nuñez, Milpitas Unified School District Vice President of the Governing Board"
+- "Gunawan Ali-Santosa, Milpitas Unified School District President of the Governing Board"
+- "Mayra Cruz, San Jose-Evergreen Community College District Trustee"
+- "Lan Nguyen, East Side High School District Board President"
+
+organizations:
+- "Santa Clara County Board of Supervisors"
+- "Interfaith Council on Economics and Justice"
+- "Minority Business Consortium"
+- "Morgan Hill Federation of Teachers"
+- "National Association for the Advancement of Colored People (NAACP) – San Jose/Silicon Valley Chapter"
+- "National Women’s Political Caucus Silicon Valley"
+- "Our Lady of Guadalupe Catholic Parish"
+- "AFSCME 101"
+- "California Nurses Association"
+- "California Alliance for Retired Americans, Santa Clara County Action Team"
+- "Commission on the Status of Women (CSW)"
+- "Council on American Islamic Relations – California"
+- "DAWN (Democratic Activists for Women Now)"
+- "Santa Clara County Democratic Party"
+- "Dean Democratic Club of Silicon Valley"
+- "Deanery Six, Diocese of San Jose"
+- "Federation of Retired Union Members"
+- "Latinos United for a New America (LUNA)"
+- "The League of Latin American Citizens - California (CA LULAC)"
+- "PACT: People Acting in Community Together"
+- "Sacred Heart Community Service"
+- "SEIU 521"
+- "SEIU 521 Retirees Santa Clara County Caucus"
+- "SEIU United Healthcare Workers"
+- "SEIU United Service Workers West"
+- "Services, Immigrant Rights and Education Network (SIREN)"
+- "Silicon Valley De-Bug"
+- "Silicon Valley Rising"
+- "Silicon Valley Vietnamese American Chamber of Commerce"
+- "Silicon Valley Young Democrats"
+- "Somos Mayfair"
+- "South Bay AFL-CIO Labor Council"
+- "Swilley Graphics"
+- "Working Blue Democratic Club of Silicon Valley"
+- "Working Partnerships USA"
+
+individuals:
+- "Tom Steyer, Founder of NextGen Climate*"
+- "Harry Adams, Chair, Santa Clara County Human Relations Commission*"
+- "Angie Nunn, California School Employees Association*"
+- "Sheillena Brunston, Amalgamated Transit Union Local 265*"
+- "Sal Ventura, IBEW 332*"
+- "LaVerne Washington, AFSCME 101*"
+- "Jon Paul Wolfe, IBEW 332*"
+- "Jonathan Karpf, California Faculty Association*"
+- "Fred Hirsch, UA 393*"
+- "John Nevill, Healthcare Administrator"
+- "Tony Alexander"
+- "Judy Pipkin"
+- "Donald Christopher Young"
+- "Bruce Huynh"
+- "David Fung"
+- "Jerry Liu"
+- "Patrick Kwok"
+- "Anthony Phan"
+- "Mark Tiernan"
+- "Mario Banuelos"
+- "Rene Angelo Spring"
+- "Thida Cornes"
+- "Ken “Kacey” Carpenter"
+- "Lucas Ramirez"
+- "Tino Silva"
+- "Sudhanshu Jain"
+- "Dr. Mohammed Nadeem"
+- "Ahmad Rafah"
+- "Anna Welsh"
+- "Nancy Smith"
+- "Linda Williams"
+- "Ro Khanna"
+- "Helen Chapman"
+---
+
+<!-- SECTION HEADING -->
+<%= partial(:subheader_generic, :locals => { :heading => 'Endorsements' }) %>
+
+<!-- MAIN CONTENT -->
+<section class="site-section">
+    <div class="site-section__content content">
+
+        <div class="grid grid--three-col">
+        	<div class="grid__col">
+                <h2>Elected Officials</h2>
+
+                <ul>
+                    <% current_page.data.electeds.each do |endo| %>
+                        <li><%= endo %></li>
+                    <% end %> 
+                </ul>
+
+        	</div>
+        	<div class="grid__col">
+                <h2>Organizations</h2>
+
+                <ul>
+                    <% current_page.data.organizations.each do |endo| %>
+                        <li><%= endo %></li>
+                    <% end %> 
+                </ul>
+        	</div>
+            <div class="grid__col">
+                <h2>Individuals</h2>
+
+                <ul>
+                    <% current_page.data.individuals.each do |endo| %>
+                        <li><%= endo %></li>
+                    <% end %> 
+                </ul>
+            </div>
+
+        </div><!-- .grid -->
+
+        <p><em>* Affiliations listed for identification purposes only</em></p>
+
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+<!-- MORE LINKS -->
+<section class="site-section site-section--green">
+    <div class="site-section__content content">
+
+        <ul class="grid--three-col">
+
+            <li class="grid__col">
+                <% link_to 'about/faqs.html', :class => "media-object link-block link-block--white" do %>
+                    <div class="media-object__content">
+                        <h3 class="link-block__heading">FAQs</h3>
+                        <p class="link-block__content">Get answers to common questions about Measure E: Opportunity to Work</p>
+                        <p class="link-block__more-link">Read FAQs</p>
+                    </div>
+                <% end %>
+            </li>
+
+            <li class="grid__col">
+                <% link_to 'about/lies.html', :class => "media-object link-block link-block--white" do %>
+                    <div class="media-object__content">
+                        <h3 class="link-block__heading">Chamber Lies</h3>
+                        <p class="link-block__content">Measure E’s opponents have made a slew of misleading claims about the initiative</p>
+                        <p class="link-block__more-link">Get the facts</p>
+                    </div>
+                <% end %>
+            </li>
+
+            <li class="grid__col">
+                <%= partial "bottom-story" %>
+            </li>
+
+        </ul>
+
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

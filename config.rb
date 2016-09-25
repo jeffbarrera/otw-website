@@ -34,15 +34,22 @@ end
 #   end
 # end
 
+
+# External Pipeline for Gulp builds
+activate :external_pipeline,
+  name: :gulp,
+  command: "./node_modules/gulp/bin/gulp.js",
+  source: "temp"
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
   activate :minify_css
 
-  # Minify Javascript on build
-  activate :minify_javascript
-
   # Pretty URLs
   activate :directory_indexes
+
+  # relative assets (at least while developing)
+  activate :relative_assets
 
 end

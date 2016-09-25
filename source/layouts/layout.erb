@@ -11,7 +11,7 @@
     <!-- styles & scripts -->
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "styles" %>
-    <%= javascript_include_tag "scripts" %>
+    <%= javascript_include_tag "scripts.min" %>
 
     <!-- Google Analytics -->
     <!-- TK TK TK -->
@@ -34,7 +34,7 @@
           <span class="logo__e">E</span>
         <% end %></h2>
 
-        <a href="#" class="site-header__nav-btn"><span>Menu</span></a>
+        <a href="#" class="site-header__nav-btn" id="header__nav-btn"><span>Menu</span></a>
 
       </div>
 
@@ -42,7 +42,7 @@
         <ul>
           <li><%= link_to 'Why', 'why.html', :class => "top-nav__item" %></li>
           <li><%= link_to 'About', 'about.html', :class => "top-nav__item" %></li>
-          <li><a href="" class="top-nav__item">Endorsements</a></li>
+          <li><%= link_to 'Endorsements', 'endorsements.html', :class => "top-nav__item" %></li>
           <li><a href="" class="top-nav__item">Stories</a></li>
           <li><a href="" class="top-nav__item">News</a></li>
           <li><a href="" class="top-nav__item top-nav__item--action">Get Involved</a></li>

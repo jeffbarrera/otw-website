@@ -1,0 +1,132 @@
+---
+title: "FAQs | Measure E: Opportunity to Work"
+lies:
+- 
+    claim: 'Businesses and non-profits are “under attack.”'
+    truth: "The Opportunity to Work (OTW) initiative doesn’t attack anybody. In fact, most of the businesses and non-profits in San Jose aren’t even covered. Over 65,000 businesses and non-profits operate in San Jose. City staff report only about 1,200 are covered by Measure E, which exempts organizations with less than 36 employees."
+- 
+    claim: "Measure E eliminates employer scheduling flexibility."
+    truth: "Measure E allows employers to schedule work whenever they want to without restriction."
+- 
+    claim: "Measure E will restrict an employer’s discretion to determine qualifications for hiring."
+    truth: "Under Opportunity to Work, businesses are free to set hiring standards. Measure E specifically states that whether an existing employee meets those standards is up to the employer, as long as the employer acts reasonably and in a good faith."
+- 
+    claim: "Measure E will cause administrative “nightmares.”"
+    truth: "Once a business has decided it needs to hire someone to fill vacant hours, it obviously has to absorb some administrative costs to recruit, screen and hire personnel. All Measure E does is direct that effort towards existing staff &mdash; people already recruited, screened, and hired. Offering hours to someone already on the payroll is likely to be significantly less costly than seeking out new personnel who may not have the needed skills or fit in with the business’s mode of operations."
+- 
+    claim: "There are stiff fines employers will have to pay if they don’t follow OTW."
+    truth: "There are NO fines, fees or civil penalties for a first violation of OTW. Only a repeat offender would face fines. The enforcement system for OTW is exactly the system used in San Jose’s minimum wage ordinance. Have businesses faced punative fines under that law? In four years, there have been fewer than 4 violations a year on average, and all have been resolved informally. The city has never issued an administrative order or citation."
+- 
+    claim: "OTW is an overreaching measure that will change how businesses and non-profits operate."
+    truth: "OTW gives qualified, part time workers with large employers the option to work additional hours if additional hours become available. Covered businesses would decide the duration and times of any additional shifts they want to create. They would decide the amount of notice of the availability of those additional shifts. And they would decide the qualifications for the additional shifts."
+- 
+    claim: OTW will make seasonal and holiday hiring difficult.
+    truth: All OTW does is to require that people who have already been hired get first dibs on additional hours if they are qualified for the job. That’s not so difficult.
+- 
+    claim: OTW will reduce internship job opportunities.
+    truth: "The employer gets to determine the skills and experience appropriate for a job. If employers want to create an internship position &mdash; typically for someone with minimal skills, someone who will receive extra training and supervision, someone who will perform less than a standard work load, and someone who will hold the internship for a limited duration &mdash; Measure E will not prevent them from doing so."
+- 
+    claim: "Measure E will open the door to frivolous lawsuits because the measure includes a private right of action."
+    truth: "A private cause of action gives people their day in court if the government office assigned to enforce a law fails to perform its duty. Private causes of action exist in a large number of important laws, like the Clean Air Act, the Safe Drinking Water Act, the Toxic Substances Control Act, the Noise Control Act and many more. If someone wants to launch a frivolous lawsuit against a business through a private cause of action, they certainly don’t need Measure E in order to do it. Besides, when businesses seek legislation to deal with their problems &mdash; like trade secret protection &mdash; they want a private cause of action included in the bill."
+- 
+    claim: "Measure E will discourage businesses from growing in San Jose."
+    truth: "That’s what the Chamber said when San Jose adopted a Living Wage policy in 1998. That’s what they said about the city Minimum Wage increase of 2012. They have been wrong time and time again. Unfortunately, the facts don’t seem to matter to the Chamber. Their opposition is based on ideology, instead of reality. The truth is the Chamber is lying to you."
+
+---
+
+<!-- SECTION HEADING -->
+<%= partial "subheader_about" %>
+
+<!-- MAIN CONTENT -->
+<section class="site-section">
+    <div class="site-section__content">
+
+    <div class="grid grid--two-col grid--seven-three">
+    	<article class="grid__col main-col content">
+
+    		<h2 class="page-header">Chamber Lies</h2>
+
+            <p>The Silicon Valley Chamber of Commerce has launched a campaign to mislead the community about the Opportunity to Work Initiative. The Chamber has attended numerous meetings at which Measure E has been fully and accurately described, but they continue to mislead the business and non-profit communities and the public in an effort drum up opposition to Opportunity to Work.</p>
+
+            <p>We set the record straight here:</p>
+
+            <% current_page.data.lies.each do |lie| %>
+                <section class="lie__item">
+                    <h3 class="lie__claim"><span class="lie__label">Lie: </span><%= lie.claim %></h3>
+                    <p class="lie__truth"><span class="lie__label lie__label--truth">Truth: </span><%= lie.truth %></p>
+                    
+                </section>
+            <% end %>
+    		
+    	</article>
+    	<div class="grid__col">
+    		<%= partial(:sidebar, :locals => { :classes => '' }) %>
+    	</div>
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+<!-- MORE LINKS -->
+<section class="site-section site-section--green">
+    <div class="site-section__content content">
+
+        <ul class="grid--three-col">
+
+            <li class="grid__col">
+                <% link_to '', :class => "media-object link-block link-block--white", :target => "_blank" do %>
+
+                    <img class="media-object__figure media-object__figure--border" src="http://lorempixel.com/600/600/people/" alt="Measure E FAQs">
+
+                    <div class="media-object__content">
+                        <h3 class="link-block__heading">See for Yourself</h3>
+                        <p class="link-block__content">Read the full text of Measure E: Opportunity to Work</p>
+                        <p class="link-block__more-link">Read the Initiative</p>
+                    </div>
+                <% end %>
+            </li>
+
+            <li class="grid__col">
+                <% link_to 'about/faqs.html', :class => "media-object link-block link-block--white" do %>
+                    <div class="media-object__content">
+                        <h3 class="link-block__heading">FAQs</h3>
+                        <p class="link-block__content">Get answers to common questions about the Opportunity to Work initiative</p>
+                        <p class="link-block__more-link">Read FAQs</p>
+                    </div>
+                <% end %>
+            </li>
+
+            <li class="grid__col">
+                <%= partial "bottom-story" %>
+            </li>
+
+        </ul>
+
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

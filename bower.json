@@ -1,0 +1,18 @@
+{
+  "name": "otw-website",
+  "homepage": "https://github.com/jeffbarrera/otw-website",
+  "authors": [
+    "Jeff Barrera <jeff.barrera@gmail.com>"
+  ],
+  "description": "campaign site for Measure E: Opportunity to Work",
+  "main": "source/javascripts/scripts.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
