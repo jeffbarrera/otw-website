@@ -1247,6 +1247,17 @@ em, i {
   color: #4A8958;
 }
 
+/*** News articles ***/
+ul.news li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.news .news__headline {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
 .sidebar {
   padding: 2.25em;
   background-color: #53585F;
