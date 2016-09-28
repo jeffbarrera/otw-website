@@ -1,5 +1,5 @@
 ---
-title: "News | Measure E: Opportunity to Work"
+title: "News Coverage"
 articles:
 -
     url: "http://www.mercurynews.com/2016/09/23/sept-26-readers-letters-sunnyvale-mayor-backs-measure-b/"
@@ -150,8 +150,8 @@ articles:
 <section class="site-section">
     <div class="site-section__content">
 
-        <div class="grid grid--two-col grid--two-col-three-seven">
-        	<div class="grid__col main-col content">
+        <div class="grid grid--two-col grid--seven-three">
+        	<div class="grid__col content">
 
                 <ul class="news">
                     <% current_page.data.articles.each do |article| %>
@@ -164,7 +164,7 @@ articles:
 
         	</div>
             <div class="grid__col">
-                <%= partial(:sidebar, :locals => { :classes => '' }) %>
+                <%= partial(:sidebar, :locals => { :classes => '', :heading => 'Stay Informed', :ask => 'Sign up to get the latest updates on Measure E:' }) %>
             </div>
 
         </div><!-- .grid -->

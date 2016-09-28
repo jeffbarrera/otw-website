@@ -1,7 +1,7 @@
 // Forms
 
 // base form elements
-input[type="text"], input[type="email"], input[type="search"] {
+input[type="text"], input[type="email"], input[type="search"], textarea {
     border: 0;
     background-color: darken($yellow, 10%);
     padding: .8em 1em .4em 1em;

@@ -1,5 +1,5 @@
 ---
-title: "FAQs | Measure E: Opportunity to Work"
+title: "Chamber Lies"
 lies:
 - 
     claim: 'Businesses and non-profits are “under attack.”'
@@ -60,7 +60,7 @@ lies:
     		
     	</article>
     	<div class="grid__col">
-    		<%= partial(:sidebar, :locals => { :classes => '' }) %>
+            <%= partial(:sidebar, :locals => { :classes => '', :heading => 'Stay Informed', :ask => 'Sign up to get the latest updates on Measure E:' }) %>
     	</div>
     </div><!-- .site-section--content -->
 </section><!-- .site-section -->
@@ -72,9 +72,9 @@ lies:
         <ul class="grid--three-col">
 
             <li class="grid__col">
-                <% link_to '', :class => "media-object link-block link-block--white", :target => "_blank" do %>
+                <% link_to 'files/OTW_language.pdf', :class => "media-object link-block link-block--white", :target => "_blank" do %>
 
-                    <img class="media-object__figure media-object__figure--border" src="http://lorempixel.com/600/600/people/" alt="Measure E FAQs">
+                    <img class="media-object__figure media-object__figure--border" src="<%= responsive_img_path('images/language.png', "1x") %>" srcset="<%= responsive_img_path('images/language.png', "1x") %> 1x, <%= responsive_img_path('images/language.png', "2x") %> 2x" alt="Measure E FAQs">
 
                     <div class="media-object__content">
                         <h3 class="link-block__heading">See for Yourself</h3>

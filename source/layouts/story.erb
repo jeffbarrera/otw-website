@@ -1,0 +1,31 @@
+<% wrap_layout :layout do %>
+
+  <!-- SECTION HEADING -->
+  <%= partial "subheader_stories" %>
+
+  <!-- MAIN CONTENT -->
+  <section class="site-section site-section--grey">
+      <div class="site-section__content site-section__content--no-bottom-padding">
+
+      <div class="grid grid--two-col grid--seven-three">
+        <div class="grid__col">
+
+          <article class="card content">
+
+            <img src="<%= responsive_img_path(current_page.data.image_main, "1x") %>" srcset="<%= responsive_img_path(current_page.data.image_main, "1x") %> 1x, <%= responsive_img_path(current_page.data.image_main, "2x") %> 2x" alt="<%= current_page.data.first_name %>" class="card__img">
+
+            <h1><%= current_page.data.first_name %>'s Story</h1>
+
+            <%= yield %>
+
+          </article>
+
+          
+        </div>
+        <div class="grid__col">
+          <%= partial(:sidebar, :locals => { :classes => 'sidebar--left-arrow', :heading => 'Get Involved', :ask => 'Help workers like ' +  current_page.data.first_name + ' get enough hours to make ends meet:' }) %>
+        </div>
+      </div><!-- .site-section--content -->
+  </section><!-- .site-section -->
+
+<% end %>

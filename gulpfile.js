@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache');
+    cache = require('gulp-cache'),
+    copy = require('gulp-copy')
 
 // Styles task
 gulp.task('styles', function() {
@@ -23,7 +24,7 @@ gulp.task('styles', function() {
 
 // Scripts task
 gulp.task('scripts', function() {
-  return gulp.src(['bower_components/jquery/dist/jquery.min.js','source/assets/javascripts/scripts.js'])
+  return gulp.src(['bower_components/jquery/dist/jquery.min.js','bower_components/picturefill/dist/picturefill.min.js','source/assets/javascripts/scripts.js'])
     .pipe(concat('scripts.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -39,13 +40,29 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+// Files task
+gulp.task('files', function() {
+    return gulp.src('source/assets/files/**/*')
+        .pipe(gulp.dest('temp/files/'))
+        .pipe(notify({ message: 'Files task complete' }));
+});
+
+// Fonts task
+gulp.task('fonts', function() {
+    return gulp.src('source/assets/fonts/**/*')
+        .pipe(gulp.dest('temp/fonts/'))
+        .pipe(notify({ message: 'Fonts task complete' }));
+});
+
 // Watch for changes
 gulp.task('watch', function() {
     gulp.watch('source/assets/stylesheets/**/*.scss', ['styles']);
 	gulp.watch('source/assets/javascripts/**/*.js', ['scripts']);
     gulp.watch('source/assets/images/**/*', ['images']);
+    gulp.watch('source/assets/files/**/*', ['files']);
+    gulp.watch('source/assets/fonts/**/*', ['fonts']);
 });
 
 gulp.task('default', function() {
-	gulp.start('styles', 'scripts', 'images');
+	gulp.start('styles', 'scripts', 'images', 'files', 'fonts');
 });

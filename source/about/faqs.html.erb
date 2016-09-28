@@ -1,5 +1,5 @@
 ---
-title: "FAQs | Measure E: Opportunity to Work"
+title: "FAQs"
 ---
 
 <!-- SECTION HEADING -->
@@ -101,7 +101,7 @@ title: "FAQs | Measure E: Opportunity to Work"
     		
     	</article>
     	<div class="grid__col">
-    		<%= partial(:sidebar, :locals => { :classes => '' }) %>
+            <%= partial(:sidebar, :locals => { :classes => '', :heading => 'Stay Informed', :ask => 'Sign up to get the latest updates on Measure E:' }) %>
     	</div>
     </div><!-- .site-section--content -->
 </section><!-- .site-section -->
@@ -113,9 +113,9 @@ title: "FAQs | Measure E: Opportunity to Work"
         <ul class="grid--three-col">
 
             <li class="grid__col">
-                <% link_to 'faqs.html', :class => "media-object link-block link-block--white", :target => "_blank" do %>
+                <% link_to 'files/OTW_FAQs.pdf', :class => "media-object link-block link-block--white", :target => "_blank" do %>
 
-                    <img class="media-object__figure media-object__figure--border" src="http://lorempixel.com/600/600/people/" alt="Measure E FAQs">
+                    <img class="media-object__figure media-object__figure--border" src="<%= responsive_img_path('images/faqs.png', "1x") %>" srcset="<%= responsive_img_path('images/faqs.png', "1x") %> 1x, <%= responsive_img_path('images/faqs.png', "2x") %> 2x" alt="Measure E FAQs">
 
                     <div class="media-object__content">
                         <h3 class="link-block__heading">Download FAQs</h3>

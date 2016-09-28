@@ -2,6 +2,10 @@
 	padding: 2.25em;
 	background-color: $grey-dark;
 	max-width: 400px;
+
+	@include bp(bp-mobile) {
+		padding: 1.5em;
+	}
 }
 
 .sidebar--yellow {
@@ -12,6 +16,12 @@
 	@include bp(bp-not-mobile) {
 		position: relative;
 		margin-top: -8.5em;
+	}
+}
+
+.sidebar--left-arrow {
+	@include bp(bp-not-mobile) {
+		@include arrow(left, $yellow);
 	}
 }
 

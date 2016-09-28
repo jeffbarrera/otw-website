@@ -1,5 +1,17 @@
 /*** TYPOGRAPHY ***/
 
+.content h1 {
+	@include font-futura;
+	font-size: 2em;
+	color: $yellow;
+	line-height: 1.6;
+	margin-bottom: .5em;
+
+	@include bp(bp-mobile) {
+		font-size: 1.125em;
+	}
+}
+
 .content h2 {
 	@include font-futura;
 	font-size: 1.5em;
@@ -49,6 +61,65 @@
 		margin-top: .5em;
 	}
 }
+
+// blockquotes
+.pull-quote {
+	margin: 2em 0;
+
+	.pull-quote__quote {
+		font-size: 1.325em;
+		font-style: italic;
+		color: $green-text;
+		quotes: "“" "”" "‘" "’";
+		padding-left: 2em;
+		position: relative;
+		margin-bottom: .5em;
+
+		&:before {
+			content: open-quote;
+			font-size: 3.5em;
+			position: absolute;
+			left: 0;
+			top: -.4em;
+		}
+	}
+
+	.pull-quote__cite {
+		display: block;
+		text-align: right;
+		color: $grey-light;
+
+		&:before {
+			content: "-";
+			padding-right: .3em;
+		}
+	}
+}
+
+.pull-quote--right {
+	@include bp(bp-not-mobile) {
+		float: right;
+		max-width: 15em;
+		margin: .5em 0 1em 1em;
+	}
+}
+
+
+// Intro text -- not tied to content class
+.intro-text {
+	line-height: 1.5;
+	margin-bottom: 2em;
+	max-width: 30em;
+
+	@include bp(bp-not-mobile) {
+		font-size: 1.125em;
+	}
+}
+
+.intro-text--white {
+	color: #fff;
+}
+
 
 
 /*** FAQs ***/

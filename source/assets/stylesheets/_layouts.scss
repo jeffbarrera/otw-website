@@ -14,6 +14,10 @@ $section-padding-mobile: 30px;
 	text-align: left;
 }
 
+.site-section__content--no-bottom-padding {
+    padding-bottom: 0;
+}
+
 // large screens
 @include bp(bp-max) {
     .site-section {

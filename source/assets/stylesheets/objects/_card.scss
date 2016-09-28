@@ -1,0 +1,54 @@
+.card {
+	display: block;
+	background-color: #fff;
+	padding: 2em;
+	transition: all .2s ease-out;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+	margin-bottom: 3em;
+
+	@include bp(bp-mobile) {
+		padding: 1.5em;
+		margin-bottom: 2em;
+		font-size: .875em;
+	}
+}
+
+.card__img {
+	max-width: 100%;
+	margin-bottom: 2em;
+}
+
+.card__heading {
+	color: $yellow;
+	color: $green-text;
+	@include font-futura;
+	font-size: 1.125em;
+	margin-bottom: .5em;
+	transition: all $transition-time-ease;
+}
+
+.card__text {
+	color: $text;
+	line-height: 1.4;
+	margin-bottom: 1em;
+}
+
+.card__more-link {
+	color: $green-text;
+	@include underline-link($green-text);
+	font-weight: bold;
+	display: inline-block;
+	transition: all $transition-time-ease;
+}
+
+a.card:hover {
+	box-shadow: 0 3px 20px rgba(0,0,0,.6);
+
+	.card__heading {
+		color: $yellow;
+	}
+
+	.card__more-link {
+		border-color: $green-text;
+	}
+}

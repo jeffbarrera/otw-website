@@ -1,0 +1,79 @@
+---
+title: "Stories"
+---
+
+<!-- SECTION HEADING -->
+<%= partial "subheader_stories" %>
+
+<!-- MAIN CONTENT -->
+<section class="site-section site-section--grey">
+    <div class="site-section__content site-section__content--no-bottom-padding">
+
+    <div class="grid grid--two-col grid--seven-three">
+    	<div class="grid__col">
+
+            <p class="intro-text intro-text--white">64,000 workers in San Jose &mdash; more than a quarter of the hourly workforce &mdash; have part-time or variable schedules at their main job. Here are a few of their stories:</p>
+
+            <ul class="grid grid--two-col-even">
+
+                <% blog('stories').articles.each do |story| %>
+                    <li class="grid__col">
+                        <% link_to story.url, :class => "card" do %>
+
+                            <img src="<%= responsive_img_path(story.data.image_main, "1x") %>" srcset="<%= responsive_img_path(story.data.image_main, "1x") %> 1x, <%= responsive_img_path(story.data.image_main, "2x") %> 2x" alt="<%= story.data.first_name %>" class="card__img">
+
+                            <h3 class="card__heading"><%= story.data.first_name %></h3>
+
+                            <p class="card__text"><%= story.data.teaser %></p>
+
+                            <p class="card__more-link">Read <%= story.data.first_name %>'s story</p>
+
+                        <% end %>
+                    </li>
+                <% end %>
+
+                <li class="grid__col">
+                    <p class="intro-text intro-text--white"><em>Check back soon &mdash; we'll be adding more stories throughout the campaign</em></p>
+                </li>
+            </ul>
+    		
+    	</div>
+    	<div class="grid__col">
+            <aside class="sidebar sidebar--yellow">
+                <h3 class="sidebar__heading">Share Your Story</h3>
+                <p>Are you a part-time worker struggling to make ends meet?</p> 
+
+                <p>Help us fix this problem by telling your story:</p>
+
+                <script>window.yepnope || document.write('<script src="https://actionnetwork.org/includes/js/yepnope154-min.js"><\/script>');</script><script src='https://actionnetwork.org/widgets/v2/form/share-your-story-17?format=js&source=widget'></script><div id='can-form-area-share-your-story-17' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
+
+            </aside>
+    	</div>
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
