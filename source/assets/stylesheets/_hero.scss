@@ -1,0 +1,203 @@
+.site-section--hero {
+	background-color: $grey-dark;
+	overflow: hidden;
+	@include bg-img-cover;
+	background-position: 50% 0%;
+
+	@include bp(bp-mobile) {
+		background-color: $green-bg;
+
+		&:before {
+			content: '';
+			display: block;
+			background-image: url('../images/hero-bg.jpg'); // TODO - lower res image
+			@include bg-img-cover;
+			height: 50vw;
+			width: 100%;
+		}
+	}
+
+	@include bp(bp-not-mobile) {
+		background-image: url('../images/hero-bg.jpg');
+		position: relative;
+
+		&::before {
+			content: '';
+	        width: 100%;
+	        height: 100%;
+	        background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,.2) 95%);
+	        display: block;
+	        position: absolute;
+		}
+	}
+}
+
+/************
+HERO TEXT
+*************/
+.hero__text {
+	color: #fff;
+
+	@include bp(bp-not-mobile) {
+		position: relative;
+		z-index: 5;
+		width: 45%;
+
+		&::before {
+			content: '';
+			height: 200%;
+			width: 200%;
+			position: absolute;
+			z-index: 2;
+			top: -58%;
+			left: -62%;
+			background-image: url('../images/hero-scrim.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+	}
+
+	@include bp(bp-max) {
+		&::before {
+			height: 200%;
+			width: 200%;
+			top: -60%;
+			left: -55%;
+		}
+	}
+}
+
+// HEADING
+.hero__heading {
+	margin-bottom: 1em;
+	position: relative;
+	z-index: 5;
+}
+
+.hero__heading--small {
+	display: block;
+	@include font-body;
+	font-weight: normal;
+	font-size: 1.25em;
+	margin-bottom: 1.2em;
+
+	@include bp(bp-mobile) {
+		font-size: .875em;
+	}
+}
+
+.hero__heading--mid,
+.hero__heading--large {
+	@include font-futura;
+	display: block;
+	text-transform: uppercase;
+	line-height: 1.4;
+}
+
+.hero__heading--mid {
+	font-size: 2.5em;
+
+	@include bp(bp-mobile) {
+		font-size: 1.5em;
+		margin-bottom: .3em;
+	}
+
+	@include bp(bp-max) {
+		font-size: 3.5em;
+	}
+}
+
+.hero__heading--large {
+	font-size: 4em;
+
+	@include bp(bp-mobile) {
+		font-size: 2.5em;
+	}
+
+	@include bp(bp-max) {
+		font-size: 5em;
+	}
+}
+
+
+// DESCRIPTION
+.hero__desc {
+	font-size: 1.125em;
+	line-height: 1.5;
+	max-width: 325px;
+	position: relative;
+	z-index: 5;
+
+	@include bp(bp-mobile) {
+		font-size: .875em;
+	}
+
+	@include bp(bp-max) {
+		font-size: 1.25em;
+		max-width: 350px;
+	}
+}
+
+/**************
+INSIDE HERO
+**************/
+.site-section--inside-hero {
+	display: block;
+	height: 33vw;
+	max-height: 26em;
+}
+
+.hero-bg--family {
+	background-color: $grey-dark;
+	background-image: url('../images/hero-family.jpg');
+	position: relative;
+
+	@include bp(bp-not-mobile) {
+		&::before {
+			content: '';
+	        width: 100%;
+	        height: 100%;
+	        background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,.2) 95%);
+	        display: block;
+	        position: absolute;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

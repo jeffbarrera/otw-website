@@ -53,9 +53,9 @@ configure :build do
   # Pretty URLs
   activate :directory_indexes
 
-  activate :asset_hash
+  activate :asset_hash, :ignore => %r{^images/.*}
 
   # relative assets (at least while developing)
-  activate :relative_assets
+  # activate :relative_assets
 
 end

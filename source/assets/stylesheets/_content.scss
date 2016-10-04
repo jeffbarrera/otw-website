@@ -53,6 +53,18 @@
 	font-weight: bold;
 }
 
+.content .big-text {
+	font-weight: bold;
+
+	@include bp(bp-not-mobile) {
+		font-size: 1.25em;
+	}
+}
+
+.content .big-text--yellow {
+	color: $yellow;
+}
+
 .content .page-header {
 	font-size: 2.5em;
 

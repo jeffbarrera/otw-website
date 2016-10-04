@@ -120,7 +120,7 @@ form {
     }
 
     &:active {
-        color: #ddd;
+        color: #eee;
         background-color: $green-bg;
         box-shadow: inset 0px 1px 10px rgba(0,0,0,.1);
     }
@@ -137,6 +137,22 @@ form {
 
 .button--list {
     margin-right: 1.5em;
+}
+
+.button--green, a.button--green {
+    border: 0;
+    background-color: $green-bg;
+    color: #fff;
+
+    &:hover {
+        background-color: $yellow;
+    }
+
+    &:active {
+        background-color: darken($yellow, 10%);
+        box-shadow: inset 0px 1px 10px rgba(0,0,0,.1);
+        color: #eee;
+    }
 }
 
 

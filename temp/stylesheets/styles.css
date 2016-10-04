@@ -1244,6 +1244,19 @@ em, i {
   border-color: #386843;
 }
 
+.content .big-text {
+  font-weight: bold;
+}
+@media (min-width: 951px) {
+  .content .big-text {
+    font-size: 1.25em;
+  }
+}
+
+.content .big-text--yellow {
+  color: #E99527;
+}
+
 .content .page-header {
   font-size: 2.5em;
 }
@@ -1600,7 +1613,7 @@ form label.checkbox input[type="checkbox"] {
   outline: 0;
 }
 .button:active, input[type="submit"]:active {
-  color: #ddd;
+  color: #eee;
   background-color: #4A8958;
   box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1617,6 +1630,20 @@ form label.checkbox input[type="checkbox"] {
 
 .button--list {
   margin-right: 1.5em;
+}
+
+.button--green, a.button--green {
+  border: 0;
+  background-color: #4A8958;
+  color: #fff;
+}
+.button--green:hover, a.button--green:hover {
+  background-color: #E99527;
+}
+.button--green:active, a.button--green:active {
+  background-color: #c97b14;
+  box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.1);
+  color: #eee;
 }
 
 .can_embed h2, .can_embed h4, .can_embed #logo_wrap, .can_embed #action_info, .can_embed .ajax-loading, .can_embed #d_sharing, .can_embed .control-label, .can_embed .country_wrap {
@@ -2091,6 +2118,31 @@ HERO TEXT
   .hero__desc {
     font-size: 1.25em;
     max-width: 350px;
+  }
+}
+
+/**************
+INSIDE HERO
+**************/
+.site-section--inside-hero {
+  display: block;
+  height: 33vw;
+  max-height: 26em;
+}
+
+.hero-bg--family {
+  background-color: #53585F;
+  background-image: url("../images/hero-family.jpg");
+  position: relative;
+}
+@media (min-width: 951px) {
+  .hero-bg--family::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.2) 95%);
+    display: block;
+    position: absolute;
   }
 }
 
