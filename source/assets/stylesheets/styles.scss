@@ -35,6 +35,8 @@ $grey-dark: #53585F;
 $grey-light: lighten($grey-dark, 20%);
 $red: #E34110;
 $text: darken($grey-dark, 10%);
+$blue-dark: #005CB7;
+$blue-light: #7FADDB;
 
 body {
   width: 100%;
@@ -67,7 +69,7 @@ em, i {font-style: italic;}
 @import "objects/media-object";
 @import "objects/line-nav";
 @import "objects/card";
-
+@import "share-overlay";
 
 
 

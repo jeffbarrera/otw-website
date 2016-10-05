@@ -1646,6 +1646,11 @@ form label.checkbox input[type="checkbox"] {
   color: #eee;
 }
 
+.button--share {
+  margin-top: 1em;
+  font-size: .875em;
+}
+
 .can_embed h2, .can_embed h4, .can_embed #logo_wrap, .can_embed #action_info, .can_embed .ajax-loading, .can_embed #d_sharing, .can_embed .control-label, .can_embed .country_wrap {
   display: none;
 }
@@ -2495,4 +2500,89 @@ a.card:hover .card__heading {
 }
 a.card:hover .card__more-link {
   border-color: #4A8958;
+}
+
+/******
+Overlay elements
+******/
+.share-overlay {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: -3em;
+  background-color: #53585F;
+  border: 2px solid #fff;
+  border-left: 0;
+  list-style: none;
+  z-index: 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+.share-overlay__btn {
+  display: block;
+  position: relative;
+}
+.share-overlay__btn:before {
+  display: block;
+  width: 1.75em;
+  height: 1.75em;
+  text-align: center;
+  padding: .4em;
+  box-sizing: border-box;
+  font-family: "Font Awesome";
+  color: #fff;
+  font-size: 1.25em;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+.share-overlay__btn:after {
+  position: absolute;
+  display: block;
+  left: 35px;
+  top: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 37px;
+  min-width: 10em;
+  font-size: .875em;
+  padding: .65em .8em;
+  color: #4A8958;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  z-index: 50;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+.share-overlay__btn:hover:before {
+  background-color: #E99527;
+}
+.share-overlay__btn:hover:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.share-overlay__btn:active:before {
+  background-color: #c97b14;
+}
+
+.share-overlay__btn--facebook:before {
+  content: '\F09A';
+  background-color: #005CB7;
+}
+.share-overlay__btn--facebook:after {
+  content: 'Share on Facebook';
+  top: -2px;
+}
+
+.share-overlay__btn--twitter:before {
+  content: '\F099';
+  background-color: #7FADDB;
+}
+.share-overlay__btn--twitter:after {
+  content: 'Share on Twitter';
+}
+
+@media (max-width: 950px) {
+  .share-overlay {
+    display: none;
+  }
 }
