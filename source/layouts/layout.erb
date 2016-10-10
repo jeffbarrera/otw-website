@@ -31,7 +31,7 @@
       <meta property="og:image" content="http://opportunitytowork.org/images/social-icon.jpg" />
     <% end %>
 
-    <meta property="og:url" content="http://opportunitytowork.org"/>
+    <meta property="og:url" content="http://opportunitytowork.org<%= current_page.url %>"/>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Yes on E: Opportunity to Work"/>
     <meta property="og:description" content="<%= current_page.data.desc || current_page.data.teaser || "Measure E will help hourly workers get access to enough hours so their paycheck covers the bills and puts food on the table." %>" />
@@ -80,7 +80,7 @@
           <li><%= link_to 'Endorsements', '/endorsements.html', :class => "top-nav__item" %></li>
           <li><%= link_to 'Stories', '/stories.html', :class => "top-nav__item" %></li>
           <li><%= link_to 'News', '/news.html', :class => "top-nav__item" %></li>
-          <!-- <li><a href="" class="top-nav__item top-nav__item--action">Get Involved</a></li> -->
+          <li><%= link_to 'Get Involved', '/get-involved.html', :class => "top-nav__item top-nav__item--action" %></li>
         </ul>
       </nav>
 

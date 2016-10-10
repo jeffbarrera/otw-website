@@ -1585,15 +1585,24 @@ form .checkbox_group_wrap {
 }
 form label.control-label.check_radio_label {
   display: block;
-  margin-bottom: .75em;
+  margin-bottom: .25em;
+  color: #fff;
+  font-family: 'League Spartan', 'Futura', 'Source Sans Pro', sans-serif;
 }
 form label.checkbox {
   display: block;
-  margin-bottom: .5em;
+  color: #fff;
 }
 form label.checkbox input[type="checkbox"] {
-  margin: .25em .5em 1em 0;
-  float: left;
+  margin: .25em .5em .5em 0;
+}
+form .control-group.checkbox_group_wrap label.checkbox {
+  margin-bottom: 0;
+}
+form label.radio {
+  display: inline-block;
+  color: #fff;
+  margin: 0 .75em 1.25em 0;
 }
 
 .button, input[type="submit"] {
