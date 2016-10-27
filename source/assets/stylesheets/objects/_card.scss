@@ -13,6 +13,13 @@
 	}
 }
 
+.card--push-up {
+	@include bp(bp-not-mobile) {
+		position: relative;
+		margin-top: -10em;
+	}
+}
+
 .card__img {
 	max-width: 100%;
 	margin-bottom: 2em;

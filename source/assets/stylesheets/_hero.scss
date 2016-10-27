@@ -148,9 +148,8 @@ INSIDE HERO
 	max-height: 26em;
 }
 
-.hero-bg--family {
+.hero-bg--inside {
 	background-color: $grey-dark;
-	background-image: url('../images/hero-family.jpg');
 	position: relative;
 
 	@include bp(bp-not-mobile) {
@@ -165,9 +164,53 @@ INSIDE HERO
 	}
 }
 
+.hero-bg--family {
+	background-image: url('../images/hero-family.jpg');
+}
 
+.hero-bg--dilsa {
+	background-image: url('../images/hero-dilsa.jpg');
 
+	&::before {
+		content: '';
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(0,0,0,.4) 40%, rgba(0,0,0,0) 65%);
+        display: block;
+        position: absolute;
+	}
+}
 
+// HERO TEXT
+.inside-hero__text {
+	color: #fff;
+	position: relative;
+	text-shadow: 0 1px 2px rgba(0,0,0,.4);
+	max-width: 9em;
+
+	@include bp(bp-not-mobile) {
+		margin-top: 2vw;
+		max-width: 30em;
+	}
+}
+
+.inside-hero__headline {
+	@include font-futura;
+	font-size: 3em;
+	margin-bottom: .25em;
+
+	@include bp(bp-mobile) {
+		font-size: 1em;
+	}
+}
+
+.inside-hero__subhead {
+	font-size: 2em;
+
+	@include bp(bp-mobile) {
+		font-size: .75em;
+	}
+}
 
 
 

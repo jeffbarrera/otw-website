@@ -180,7 +180,7 @@ form {
 
 	// hide AN elements
 
-	h2, h4, #logo_wrap, #action_info, .ajax-loading, #d_sharing, .control-label, .country_wrap {
+	h2, h4, #logo_wrap, #action_info, .ajax-loading, #d_sharing, .control-label, .country_wrap, .discussion-board {
         display: none;
     }
 
@@ -225,9 +225,11 @@ form {
         @include font-futura;
         font-size: 1.375em;
         display: block;
-        margin: 2em 0 -.5em;
+        margin: 2em 0;
     }
 }
+
+
 
 
 .can_thank_you-block,

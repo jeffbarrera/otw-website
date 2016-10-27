@@ -108,7 +108,12 @@
     height: 100%;
 }
 
-
+// Hide on mobile
+.hide-mobile {
+    @include bp(bp-mobile) {
+        display: none;
+    }
+}
 
 
 

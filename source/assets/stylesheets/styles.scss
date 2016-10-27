@@ -5,15 +5,17 @@ $transition-time-ease: .2s ease;
 $breakpoint-max: 1080px;
 $breakpoint-mobile: 950px;
 
-// reset and helpers
+// reset
 @import "helpers/reset";
+
+// Mixins
+@import "helpers/mixins";
+
+// Helpers
 @import "helpers/helper-classes";
 
 // Fonts
 @import "helpers/fonts";
-
-// Mixins
-@import "helpers/mixins";
 
 // animations
 // @import "helpers/animations";

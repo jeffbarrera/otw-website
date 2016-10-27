@@ -53,8 +53,10 @@
 	font-weight: bold;
 }
 
+// Text variations
 .content .big-text {
 	font-weight: bold;
+	color: $grey-light;
 
 	@include bp(bp-not-mobile) {
 		font-size: 1.25em;
@@ -63,6 +65,24 @@
 
 .content .big-text--yellow {
 	color: $yellow;
+}
+
+.content .letter-intro {
+	color: $grey-light;
+	padding-left: 2em;
+	position: relative;
+	@include bp(bp-not-mobile) {
+		font-size: 1.325em;
+	}
+
+	&:before {
+		content: "\201C";
+		font-weight: bold;
+		font-size: 3.5em;
+		position: absolute;
+		left: -10px;
+		top: -.4em;
+	}
 }
 
 .content .page-header {

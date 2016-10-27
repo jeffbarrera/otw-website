@@ -535,6 +535,12 @@ textarea {
   height: 100%;
 }
 
+@media (max-width: 950px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
 /* mixin by Peter Mescalchin
 https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss */
 @font-face {
@@ -619,7 +625,7 @@ https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss */
 
 @media (min-width: 951px) {
   .grid--six-four > .grid__col:first-child {
-    width: 59%;
+    width: 55%;
   }
   .grid--six-four > .grid__col:last-child {
     width: 40%;
@@ -1246,6 +1252,7 @@ em, i {
 
 .content .big-text {
   font-weight: bold;
+  color: #848b94;
 }
 @media (min-width: 951px) {
   .content .big-text {
@@ -1255,6 +1262,25 @@ em, i {
 
 .content .big-text--yellow {
   color: #E99527;
+}
+
+.content .letter-intro {
+  color: #848b94;
+  padding-left: 2em;
+  position: relative;
+}
+@media (min-width: 951px) {
+  .content .letter-intro {
+    font-size: 1.325em;
+  }
+}
+.content .letter-intro:before {
+  content: "\201C";
+  font-weight: bold;
+  font-size: 3.5em;
+  position: absolute;
+  left: -10px;
+  top: -.4em;
 }
 
 .content .page-header {
@@ -1660,7 +1686,7 @@ form label.radio {
   font-size: .875em;
 }
 
-.can_embed h2, .can_embed h4, .can_embed #logo_wrap, .can_embed #action_info, .can_embed .ajax-loading, .can_embed #d_sharing, .can_embed .control-label, .can_embed .country_wrap {
+.can_embed h2, .can_embed h4, .can_embed #logo_wrap, .can_embed #action_info, .can_embed .ajax-loading, .can_embed #d_sharing, .can_embed .control-label, .can_embed .country_wrap, .can_embed .discussion-board {
   display: none;
 }
 .can_embed #action_welcome_message_inner {
@@ -1694,7 +1720,7 @@ form label.radio {
   font-family: 'League Spartan', 'Futura', 'Source Sans Pro', sans-serif;
   font-size: 1.375em;
   display: block;
-  margin: 2em 0 -.5em;
+  margin: 2em 0;
 }
 
 .can_thank_you-block,
@@ -2144,19 +2170,67 @@ INSIDE HERO
   max-height: 26em;
 }
 
-.hero-bg--family {
+.hero-bg--inside {
   background-color: #53585F;
-  background-image: url("../images/hero-family.jpg");
   position: relative;
 }
 @media (min-width: 951px) {
-  .hero-bg--family::before {
+  .hero-bg--inside::before {
     content: '';
     width: 100%;
     height: 100%;
     background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.2) 95%);
     display: block;
     position: absolute;
+  }
+}
+
+.hero-bg--family {
+  background-image: url("../images/hero-family.jpg");
+}
+
+.hero-bg--dilsa {
+  background-image: url("../images/hero-dilsa.jpg");
+}
+.hero-bg--dilsa::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 40%, transparent 65%);
+  display: block;
+  position: absolute;
+}
+
+.inside-hero__text {
+  color: #fff;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  max-width: 9em;
+}
+@media (min-width: 951px) {
+  .inside-hero__text {
+    margin-top: 2vw;
+    max-width: 30em;
+  }
+}
+
+.inside-hero__headline {
+  font-family: 'League Spartan', 'Futura', 'Source Sans Pro', sans-serif;
+  font-size: 3em;
+  margin-bottom: .25em;
+}
+@media (max-width: 950px) {
+  .inside-hero__headline {
+    font-size: 1em;
+  }
+}
+
+.inside-hero__subhead {
+  font-size: 2em;
+}
+@media (max-width: 950px) {
+  .inside-hero__subhead {
+    font-size: .75em;
   }
 }
 
@@ -2461,6 +2535,13 @@ a.link-block--popout {
     padding: 1.5em;
     margin-bottom: 2em;
     font-size: .875em;
+  }
+}
+
+@media (min-width: 951px) {
+  .card--push-up {
+    position: relative;
+    margin-top: -10em;
   }
 }
 
