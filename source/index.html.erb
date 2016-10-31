@@ -41,7 +41,18 @@ title: "Yes on Measure E: Opportunity to Work"
 <!-- STORIES -->
 <section class="site-section site-section--stories">
 	<ul class="stories-slider">
-		<li class="stories-slider__side"></li>
+        <% blog('stories').articles[1...2].each do |story| %>
+            <li class="stories-slider__side">
+                <a href="<%= story.url %>" class="stories-slider__img stories-slider__img--side" style="background-image: url(<%= responsive_img_path(story.data.image_main, "2x") %>);">
+
+                    <div class="stories-slider__teaser stories-slider__teaser--left">
+                        <%= story.data.teaser %>
+                    </div>
+
+                </a>
+            </li>
+        <% end %>
+            
 		<li class="stories-slider__slide">
             <% blog('stories').articles[0...1].each do |story| %>
                 <a href="<%= story.url %>" class="stories-slider__img" style="background-image: url(<%= responsive_img_path(story.data.image_main, "2x") %>);">
@@ -56,7 +67,17 @@ title: "Yes on Measure E: Opportunity to Work"
                 </div>
             <% end %>
 		</li>
-		<li class="stories-slider__side"></li>
+
+		<% blog('stories').articles[2...3].each do |story| %>
+            <li class="stories-slider__side">
+                <a href="<%= story.url %>" class="stories-slider__img stories-slider__img--side" style="background-image: url(<%= responsive_img_path(story.data.image_main, "2x") %>);">
+
+                    <div class="stories-slider__teaser stories-slider__teaser--right">
+                        <%= story.data.teaser %>
+                    </div>
+                </a>
+            </li>
+        <% end %>
 		
 	</ul>
 </section>
