@@ -218,6 +218,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+iframe {
+  border: 0;
+}
+
 /* ==========================================================================
    Figures
    ========================================================================== */
@@ -2729,4 +2733,9 @@ Overlay elements
   .share-overlay {
     display: none;
   }
+}
+.polling-place-embed {
+  width: 100%;
+  height: 40vw;
+  min-height: 400px;
 }

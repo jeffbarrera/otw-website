@@ -1,0 +1,21 @@
+---
+title: "Find Your Polling Place"
+
+desc: "Here's where to vote for Measure E on Tuesday."
+---
+
+<!-- SECTION HEADING -->
+<%= partial(:subheader_generic, :locals => { :heading => 'Where to Vote' }) %>
+
+<!-- MAIN CONTENT -->
+<section class="site-section">
+    <div class="site-section__content content">
+
+        <p class="big-text"><%= link_to 'Measure E: the Opportunity to Work initiative,', '/about.html', :target => '_blank' %> will help part-time workers get the hours they need to cover the bills.</p>
+
+        <p class="big-text">Still need to cast your ballot for Measure E? Look up your polling place here:</p>
+		
+    </div><!-- .site-section--content -->
+</section><!-- .site-section -->
+
+<iframe src="https://pollingplaces.democrats.org" class="polling-place-embed"></iframe>
