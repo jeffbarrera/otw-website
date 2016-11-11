@@ -1,0 +1,14 @@
+.site-section__content--alert-bar {
+	padding: 2em 2em 1.5em;
+	text-align: center;
+
+	p {
+		font-size: 1.25em;
+		@include font-futura;
+	}
+
+	a {
+		color: #fff;
+		@include underline-link(#fff);
+	}
+}

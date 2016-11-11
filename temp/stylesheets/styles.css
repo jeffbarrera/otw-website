@@ -2205,6 +2205,14 @@ INSIDE HERO
   position: absolute;
 }
 
+.hero-bg--party {
+  background-image: url("../images/hero-party.jpg");
+}
+
+.hero-bg--crowd {
+  background-image: url("../images/hero-crowd.jpg");
+}
+
 .inside-hero__text {
   color: #fff;
   position: relative;
@@ -2417,6 +2425,10 @@ INSIDE HERO
 
 .site-section--grey {
   background-color: #53585F;
+}
+
+.site-section--yellow {
+  background-color: #E99527;
 }
 
 /*******
@@ -2738,4 +2750,26 @@ Overlay elements
   width: 100%;
   height: 40vw;
   min-height: 400px;
+}
+
+.site-section__content--alert-bar {
+  padding: 2em 2em 1.5em;
+  text-align: center;
+}
+.site-section__content--alert-bar p {
+  font-size: 1.25em;
+  font-family: 'League Spartan', 'Futura', 'Source Sans Pro', sans-serif;
+}
+.site-section__content--alert-bar a {
+  color: #fff;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.site-section__content--alert-bar a:hover {
+  border-color: #fff;
+}
+.site-section__content--alert-bar a:active {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
 }
