@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 
 // Scripts task
 gulp.task('scripts', function() {
-  return gulp.src(['bower_components/jquery/dist/jquery.min.js','bower_components/picturefill/dist/picturefill.min.js','source/assets/javascripts/scripts.js'])
+  return gulp.src(['bower_components/jquery/dist/jquery.min.js','bower_components/picturefill/dist/picturefill.min.js','bower_components/js-cookie/src/js.cookie.js','source/assets/javascripts/scripts.js'])
     .pipe(concat('scripts.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())

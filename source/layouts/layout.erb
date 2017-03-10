@@ -10,7 +10,7 @@
     <% if current_page.path == "index.html" || current_page.path == "join-us.html" %>
       <title><%= current_page.data.title %></title>
     <% else %>
-      <title><%= current_page.data.title %> | Yes on E: Opportunity to Work</title>
+      <title><%= current_page.data.title %> | Opportunity to Work</title>
     <% end %>
 
     <!-- styles & scripts -->
@@ -73,14 +73,17 @@
 <!-- BODY -->
 <body class="<%= page_classes %>">
 
+
+  <!-- implementation overlay -->
+  <%= partial "implementation_overlay" %>
+
   <div class="body-wrapper">
 
     <!-- PRE HEADER ALERT -->
     <div class="site-section site-section--green">
     <div class="site-section__content site-section__content--alert-bar">
 
-      <p><%= link_to 'Victory! 63% of voters back Measure E', '/news/victory.html' %></p>
-      
+      <p><a href="#ordinance" class="modal__open-btn">San Jose's Opportunity to Work ordinance is now in effect!</a></p>      
     </div>
     </div>
 

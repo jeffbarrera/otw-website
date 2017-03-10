@@ -1,0 +1,39 @@
+// close button
+.modal__close-btn {
+	position: relative;
+	display: block;
+	top: 0;
+	left: 100%;
+	margin-left: -2em;
+	font-size: 1.5em;
+	color: $grey-light;
+	transition: all $transition-time-ease;
+	width: 2em;
+	height: 2em;
+	padding: .5em;
+	box-sizing: border-box;
+
+	&:hover {
+		color: $yellow;
+	}
+
+	&:active {
+		color: darken($yellow, 10%);
+	}
+}
+
+// toggle states
+.modal {
+	opacity: 1;
+	transition: opacity .3s ease-out;
+}
+
+.modal--hiding {
+	opacity: 0;
+}
+
+.modal.modal--hidden {
+	z-index: -1;
+	height: 0;
+	padding: 0;
+}

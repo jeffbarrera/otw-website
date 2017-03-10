@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "picturefill": "^3.0.2"
+    "picturefill": "^3.0.2",
+    "js-cookie": "^2.1.3"
   }
 }
